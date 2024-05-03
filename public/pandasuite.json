@@ -3,92 +3,437 @@
   "main": "",
 
   "system": {
-    "localization": false,
-    "actions": [
-      {
-        "id": "toMarker",
-        "name": "Change Image",
-        "locale_name": {
-          "fr_FR": "Change Image"
-        },
-        "params": [
-          { "id": "useless", "name": "Useless", "locale_name": {"fr_FR": "Inutile"}, "type": "Boolean" }
-        ]
-      }
-    ],
-    "events": [
-      {
-        "id": "triggerMarker",
-        "name": "Image",
-        "locale_name": {
-          "fr_FR": "Image"
-        }
-      }
-    ],
-    "markers": [
-      {
-        "params": [
-          { "id": "src", "name": "Source", "locale_name": {"fr_FR": "Source"}, "type": "String" }
-        ]
-      }
-    ]
+    "markers": false
   },
 
   "properties": [
     {
-      "id": "searchTerm",
-      "name": "Search Term",
+      "id": "content",
+      "name": "Content",
       "locale_name": {
-        "fr_FR": "Terme de recherche"
+        "fr_FR": "Contenu"
+      },
+      "type": "Edit",
+      "bindable": true,
+      "value": {}
+    },
+    {
+      "id": "placeholder",
+      "name": "Placeholder",
+      "locale_name": {
+        "fr_FR": "Texte générique"
       },
       "type": "String",
-      "value": "panda"
+      "separator": true,
+      "bindable": true
+    },
+    {
+      "id": "readOnly",
+      "name": "Read Only",
+      "locale_name": {
+        "fr_FR": "Lecture seule"
+      },
+      "type": "Boolean",
+      "value": false,
+      "bindable": true
+    },
+    {
+      "id": "toolbar",
+      "name": "Toolbar",
+      "locale_name": {
+        "fr_FR": "Barre d'outils"
+      },
+      "type": "Boolean",
+      "value": true,
+      "separator": true,
+      "bindable": true
+    },
+    {
+      "id": "toolbarHeader",
+      "name": "Header",
+      "locale_name": {
+        "fr_FR": "En-tête"
+      },
+      "type": "Boolean",
+      "value": true,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true,
+      "separator": true
+    },
+    {
+      "id": "toolbarStyle",
+      "name": "Style",
+      "locale_name": {
+        "fr_FR": "Style"
+      },
+      "type": "Boolean",
+      "value": true,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarBlock",
+      "name": "Block",
+      "locale_name": {
+        "fr_FR": "Bloc"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarMedia",
+      "name": "Media",
+      "locale_name": {
+        "fr_FR": "Média"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarList",
+      "name": "List",
+      "locale_name": {
+        "fr_FR": "Liste"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarScript",
+      "name": "Script",
+      "locale_name": {
+        "fr_FR": "Script"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarIndent",
+      "name": "Indent",
+      "locale_name": {
+        "fr_FR": "Indentation"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarDirection",
+      "name": "Direction",
+      "locale_name": {
+        "fr_FR": "Direction"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarColor",
+      "name": "Color",
+      "locale_name": {
+        "fr_FR": "Couleur"
+      },
+      "type": "Boolean",
+      "value": true,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarFont",
+      "name": "Font",
+      "locale_name": {
+        "fr_FR": "Police"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarAlign",
+      "name": "Align",
+      "locale_name": {
+        "fr_FR": "Alignement"
+      },
+      "type": "Boolean",
+      "value": true,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarClean",
+      "name": "Clean",
+      "locale_name": {
+        "fr_FR": "Nettoyer"
+      },
+      "type": "Boolean",
+      "value": false,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "toolbarHistory",
+      "name": "History",
+      "locale_name": {
+        "fr_FR": "Historique"
+      },
+      "type": "Boolean",
+      "value": true,
+      "hidden": "properties.toolbar.value != true",
+      "bindable": true
+    },
+    {
+      "id": "debounce",
+      "name": "Live Validation",
+      "locale_name": {
+        "fr_FR": "Validation en direct"
+      },
+      "type": "Boolean",
+      "value": false,
+      "separator": true
+    },
+    {
+      "id": "debounceTime",
+      "name": "Validation Delay (ms)",
+      "locale_name": {
+        "fr_FR": "Délai de validation (ms)"
+      },
+      "type": "Integer",
+      "hidden": "properties.debounce.value != true",
+      "value": 200
     }
   ],
 
   "events": [
     {
-      "id": "imageChanged",
-      "name": "Image Changed",
+      "id": "onValidated",
+      "name": "On Validated",
       "locale_name": {
-        "fr_FR": "Image Changée"
+        "fr_FR": "Validé"
+      },
+      "queryable": {
+        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "__desc_text": {
+          "name": "Text",
+          "locale_name": {
+            "fr_FR": "Texte"
+          }
+        },
+        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "__desc_html": {
+          "name": "HTML",
+          "locale_name": {
+            "fr_FR": "HTML"
+          }
+        },
+        "content": {
+          "ops": [
+            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+          ]
+        },
+        "__desc_content": {
+          "name": "Content",
+          "locale_name": {
+            "fr_FR": "Contenu"
+          }
+        },
+        "validation": {
+          "validated": false,
+          "__desc_validated": {
+            "name": "Is validated",
+            "locale_name": {
+              "fr_FR": "Est validé"
+            }
+          },
+          "isEmpty": true,
+          "__desc_isEmpty": {
+            "name": "Is empty",
+            "locale_name": {
+              "fr_FR": "Est vide"
+            }
+          }
+        },
+        "__desc_validation": {
+          "name": "Validation",
+          "locale_name": {
+            "fr_FR": "Validation"
+          }
+        }
+      }
+    },
+    {
+      "id": "onFocused",
+      "name": "On Focused",
+      "locale_name": {
+        "fr_FR": "Ciblé"
+      },
+      "queryable": {
+        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "__desc_text": {
+          "name": "Text",
+          "locale_name": {
+            "fr_FR": "Texte"
+          }
+        },
+        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "__desc_html": {
+          "name": "HTML",
+          "locale_name": {
+            "fr_FR": "HTML"
+          }
+        },
+        "content": {
+          "ops": [
+            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+          ]
+        },
+        "__desc_content": {
+          "name": "Content",
+          "locale_name": {
+            "fr_FR": "Contenu"
+          }
+        },
+        "validation": {
+          "validated": false,
+          "__desc_validated": {
+            "name": "Is validated",
+            "locale_name": {
+              "fr_FR": "Est validé"
+            }
+          },
+          "isEmpty": true,
+          "__desc_isEmpty": {
+            "name": "Is empty",
+            "locale_name": {
+              "fr_FR": "Est vide"
+            }
+          }
+        },
+        "__desc_validation": {
+          "name": "Validation",
+          "locale_name": {
+            "fr_FR": "Validation"
+          }
+        }
       }
     }
   ],
 
   "actions": [
     {
-      "id": "changeColor",
-      "name": "Change Color",
+      "id": "validate",
+      "name": "Validate",
+      "locale_name": {
+        "fr_FR": "Valider"
+      }
+    },
+    {
+      "id": "setText",
+      "name": "Set Text",
+      "locale_name": {
+        "fr_FR": "Définir le texte"
+      },
       "params": [
         {
-          "id": "backgroundColor",
-          "name": "Background Color",
+          "id": "text",
+          "name": "Text",
           "locale_name": {
-            "fr_FR": "Couleur de fond"
+            "fr_FR": "Texte"
           },
           "type": "String",
-          "value": "#FFFFFF"
+          "bindable": true
         }
       ]
-    }
-  ],
-
-  "synchronization": [
+    },
     {
-      "id": "synchroImages",
-      "name": "Synchronize images",
+      "id": "setContent",
+      "name": "Set Content",
       "locale_name": {
-        "fr_FR": "Synchroniser images"
+        "fr_FR": "Définir le contenu"
+      },
+      "params": [
+        {
+          "id": "content",
+          "name": "Content",
+          "locale_name": {
+            "fr_FR": "Contenu"
+          },
+          "type": "JSON",
+          "bindable": true
+        }
+      ]
+    },
+    {
+      "id": "clearText",
+      "name": "Clear Text/Content",
+      "locale_name": {
+        "fr_FR": "Supprimer le texte/contenu"
+      }
+    },
+    {
+      "id": "focusText",
+      "name": "Focus Text",
+      "locale_name": {
+        "fr_FR": "Cibler le texte"
       }
     }
   ],
 
-  "resources": [
-    {
-      "id": "my_image.png",
-      "type": "Image",
-      "localization": false
+  "queryable": {
+    "text": "The Panda is a bear-like mammal that eats bamboo.",
+    "__desc_text": {
+      "name": "Text",
+      "locale_name": {
+        "fr_FR": "Texte"
+      }
+    },
+    "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+    "__desc_html": {
+      "name": "HTML",
+      "locale_name": {
+        "fr_FR": "HTML"
+      }
+    },
+    "content": {
+      "ops": [{ "insert": "The Panda is a bear-like mammal that eats bamboo." }]
+    },
+    "__desc_content": {
+      "name": "Content",
+      "locale_name": {
+        "fr_FR": "Contenu"
+      }
+    },
+    "validation": {
+      "validated": false,
+      "__desc_validated": {
+        "name": "Is validated",
+        "locale_name": {
+          "fr_FR": "Est validé"
+        }
+      },
+      "isEmpty": true,
+      "__desc_isEmpty": {
+        "name": "Is empty",
+        "locale_name": {
+          "fr_FR": "Est vide"
+        }
+      }
+    },
+    "__desc_validation": {
+      "name": "Validation",
+      "locale_name": {
+        "fr_FR": "Validation"
+      }
     }
-  ]
+  }
 }

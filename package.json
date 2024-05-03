@@ -28,7 +28,10 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
-    "pandasuite-bridge": "^4.5.3"
+    "katex": "^0.16.10",
+    "lodash": "^4.17.21",
+    "pandasuite-bridge": "^4.5.3",
+    "quill": "^2.0.1"
   },
   "release-it": {
     "github": {

@@ -9,6 +9,9 @@
     "sourceType": "module"
   },
   "rules": {
-    "quotes": ["error", "double"]
+    "quotes": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "indent": "off"
   }
 }
