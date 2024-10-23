@@ -185,6 +185,7 @@ function initQuill() {
             value: quill.getContents(),
           },
         ],
+        queryable: getQueryable(),
       });
     });
   }
