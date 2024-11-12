@@ -46,7 +46,9 @@ function validate() {
   const queryable = getQueryable();
 
   // prevent multiple updates
-  properties.content.ops = queryable.content.ops;
+  if (properties.content?.ops) {
+    properties.content.ops = queryable.content.ops;
+  }
 
   PandaBridge.send(PandaBridge.UPDATED, { queryable });
   PandaBridge.send("onValidated", [queryable]);
