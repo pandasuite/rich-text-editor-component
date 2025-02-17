@@ -3,6 +3,7 @@ import Quill from "quill";
 import katex from "katex";
 import isEqual from "lodash/isEqual";
 import debounce from "lodash/debounce";
+import TurndownService from "turndown";
 
 import "quill/dist/quill.core.css";
 import "quill/dist/quill.snow.css";
@@ -12,6 +13,7 @@ import "katex/dist/katex.min.css";
 let quill = null;
 let properties = null;
 let shouldForceFocus = false;
+let turndownService = null;
 
 window.katex = katex;
 
@@ -30,9 +32,12 @@ const validationState = {
 };
 
 function getQueryable() {
+  const html = quill.getSemanticHTML();
+
   return {
     text: quill.getText(),
-    html: quill.getSemanticHTML(),
+    html,
+    markdown: turndownService.turndown(html),
     content: quill.getContents(),
     validation: validationState,
   };
@@ -135,6 +140,7 @@ function getToolbarOptions() {
 }
 
 function initQuill() {
+  turndownService = new TurndownService();
   const toolbar = properties?.toolbar
     ? {
         container: getToolbarOptions(),
