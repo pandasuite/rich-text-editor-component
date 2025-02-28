@@ -60,15 +60,14 @@ function validate() {
 }
 
 function updateText(text) {
-  if (!text) {
-    return;
-  }
   const shouldDisable = !properties?.readOnly && !quill.hasFocus();
 
   if (shouldDisable) {
     quill.enable(false);
   }
-  if (typeof text === "string") {
+  if (text === undefined || text === null || text === '') {
+    quill.setContents([]);
+  } else if (typeof text === "string") {
     if (/<\/?[a-z][\s\S]*>/i.test(text)) {
       quill.clipboard.dangerouslyPasteHTML(text);
     } else {
