@@ -326,6 +326,62 @@
           }
         }
       }
+    },
+    {
+      "id": "onBlurred",
+      "name": "On Blurred",
+      "locale_name": {
+        "fr_FR": "Perte de focus"
+      },
+      "queryable": {
+        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "__desc_text": {
+          "name": "Text",
+          "locale_name": {
+            "fr_FR": "Texte"
+          }
+        },
+        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "__desc_html": {
+          "name": "HTML",
+          "locale_name": {
+            "fr_FR": "HTML"
+          }
+        },
+        "content": {
+          "ops": [
+            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+          ]
+        },
+        "__desc_content": {
+          "name": "Content",
+          "locale_name": {
+            "fr_FR": "Contenu"
+          }
+        },
+        "validation": {
+          "validated": false,
+          "__desc_validated": {
+            "name": "Is validated",
+            "locale_name": {
+              "fr_FR": "Est validé"
+            }
+          },
+          "isEmpty": true,
+          "__desc_isEmpty": {
+            "name": "Is empty",
+            "locale_name": {
+              "fr_FR": "Est vide"
+            }
+          }
+        },
+        "__desc_validation": {
+          "name": "Validation",
+          "locale_name": {
+            "fr_FR": "Validation"
+          }
+        }
+      }
     }
   ],
 

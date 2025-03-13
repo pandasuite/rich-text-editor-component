@@ -65,7 +65,7 @@ function updateText(text) {
   if (shouldDisable) {
     quill.enable(false);
   }
-  if (text === undefined || text === null || text === '') {
+  if (text === undefined || text === null || text === "") {
     quill.setContents([]);
   } else if (typeof text === "string") {
     if (/<\/?[a-z][\s\S]*>/i.test(text)) {
@@ -211,6 +211,10 @@ function initQuill() {
 
       PandaBridge.send("onFocused", [queryable]);
       shouldForceFocus = false;
+    } else if (range === null && oldRange !== null) {
+      const queryable = getQueryable();
+
+      PandaBridge.send("onBlurred", [queryable]);
     }
   });
 
