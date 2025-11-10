@@ -11,20 +11,22 @@ body {
   --scale: 1;
   --scale-inverse: 1;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  flex-shrink: 0;
 }
 
 .ql-container.ql-snow {
   border: none;
   border-radius: 0;
   box-shadow: none;
-}
-
-.ql-toolbar.ql-snow {
-  width: 100%;
-  position: relative;
-  background: white;
-  z-index: 1;
-  top: 0;
+  flex: 1;
+  overflow-y: auto;
 }
 
 #editor {
