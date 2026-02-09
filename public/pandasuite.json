@@ -222,14 +222,14 @@
         "fr_FR": "Validé"
       },
       "queryable": {
-        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "text": "\n",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
           }
         },
-        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "html": "<p></p>",
         "__desc_html": {
           "name": "HTML",
           "locale_name": {
@@ -238,7 +238,7 @@
         },
         "content": {
           "ops": [
-            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+            { "insert": "\n" }
           ]
         },
         "__desc_content": {
@@ -278,14 +278,14 @@
         "fr_FR": "Ciblé"
       },
       "queryable": {
-        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "text": "\n",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
           }
         },
-        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "html": "<p></p>",
         "__desc_html": {
           "name": "HTML",
           "locale_name": {
@@ -294,7 +294,7 @@
         },
         "content": {
           "ops": [
-            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+            { "insert": "\n" }
           ]
         },
         "__desc_content": {
@@ -334,14 +334,14 @@
         "fr_FR": "Perte de focus"
       },
       "queryable": {
-        "text": "The Panda is a bear-like mammal that eats bamboo.",
+        "text": "\n",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
           }
         },
-        "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+        "html": "<p></p>",
         "__desc_html": {
           "name": "HTML",
           "locale_name": {
@@ -350,7 +350,7 @@
         },
         "content": {
           "ops": [
-            { "insert": "The Panda is a bear-like mammal that eats bamboo." }
+            { "insert": "\n" }
           ]
         },
         "__desc_content": {
@@ -446,14 +446,14 @@
   ],
 
   "queryable": {
-    "text": "The Panda is a bear-like mammal that eats bamboo.",
+    "text": "\n",
     "__desc_text": {
       "name": "Text",
       "locale_name": {
         "fr_FR": "Texte"
       }
     },
-    "html": "<p>The Panda is a bear-like mammal that eats bamboo.</p>",
+    "html": "<p></p>",
     "__desc_html": {
       "name": "HTML",
       "locale_name": {
@@ -461,7 +461,7 @@
       }
     },
     "content": {
-      "ops": [{ "insert": "The Panda is a bear-like mammal that eats bamboo." }]
+      "ops": [{ "insert": "\n" }]
     },
     "__desc_content": {
       "name": "Content",
