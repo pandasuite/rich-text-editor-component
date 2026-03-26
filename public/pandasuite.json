@@ -1,11 +1,17 @@
 {
+  "meta": {
+    "stype": "rich-text-editor",
+    "componentURL": "https://github.com/pandasuite/rich-text-editor-component/",
+    "description": "WYSIWYG rich text editor with configurable toolbar, auto-validation, and multiple output formats (plain text, HTML, structured Delta). Ideal for note-taking and content editing.",
+    "locale_description": {
+      "fr_FR": "Éditeur de texte riche WYSIWYG avec barre d'outils configurable, validation automatique et plusieurs formats de sortie (texte brut, HTML, Delta structuré). Idéal pour la prise de notes et l'édition de contenu."
+    }
+  },
   "version": "2.0.0",
   "main": "",
-
   "system": {
     "markers": false
   },
-
   "properties": [
     {
       "id": "content",
@@ -15,7 +21,11 @@
       },
       "type": "Edit",
       "bindable": true,
-      "value": {}
+      "value": {},
+      "description": "Opens the content editor to set the initial rich text content.",
+      "locale_description": {
+        "fr_FR": "Ouvre l'éditeur de contenu pour définir le contenu de texte riche initial."
+      }
     },
     {
       "id": "placeholder",
@@ -25,7 +35,11 @@
       },
       "type": "String",
       "separator": true,
-      "bindable": true
+      "bindable": true,
+      "description": "Placeholder text shown when the editor is empty.",
+      "locale_description": {
+        "fr_FR": "Texte indicatif affiché quand l'éditeur est vide."
+      }
     },
     {
       "id": "readOnly",
@@ -35,7 +49,11 @@
       },
       "type": "Boolean",
       "value": false,
-      "bindable": true
+      "bindable": true,
+      "description": "Make the editor read-only (content visible but not editable).",
+      "locale_description": {
+        "fr_FR": "Rendre l'éditeur en lecture seule (contenu visible mais non modifiable)."
+      }
     },
     {
       "id": "toolbar",
@@ -46,7 +64,11 @@
       "type": "Boolean",
       "value": true,
       "separator": true,
-      "bindable": true
+      "bindable": true,
+      "description": "Show the formatting toolbar above the editor.",
+      "locale_description": {
+        "fr_FR": "Afficher la barre d'outils de mise en forme au-dessus de l'éditeur."
+      }
     },
     {
       "id": "toolbarHeader",
@@ -58,7 +80,11 @@
       "value": true,
       "hidden": "properties.toolbar.value != true",
       "bindable": true,
-      "separator": true
+      "separator": true,
+      "description": "Show heading level buttons in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons de niveau de titre dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarStyle",
@@ -69,7 +95,11 @@
       "type": "Boolean",
       "value": true,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show text style buttons (bold, italic, underline, strike) in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons de style de texte (gras, italique, souligné, barré) dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarBlock",
@@ -80,7 +110,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show block format buttons (quote, code block) in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons de format de bloc (citation, bloc de code) dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarMedia",
@@ -91,7 +125,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show media insertion buttons (link, image, video) in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons d'insertion de média (lien, image, vidéo) dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarList",
@@ -102,7 +140,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show list buttons (ordered, unordered) in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons de liste (ordonnée, non ordonnée) dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarScript",
@@ -113,7 +155,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show superscript/subscript buttons in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons exposant/indice dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarIndent",
@@ -124,7 +170,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show indent/outdent buttons in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons d'indentation dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarDirection",
@@ -135,7 +185,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show text direction button (LTR/RTL) in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher le bouton de direction du texte (LTR/RTL) dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarColor",
@@ -146,7 +200,11 @@
       "type": "Boolean",
       "value": true,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show text color picker in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher le sélecteur de couleur de texte dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarFont",
@@ -157,7 +215,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show font family picker in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher le sélecteur de police dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarAlign",
@@ -168,7 +230,11 @@
       "type": "Boolean",
       "value": true,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show text alignment buttons in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons d'alignement du texte dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarClean",
@@ -179,7 +245,11 @@
       "type": "Boolean",
       "value": false,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show clear formatting button in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher le bouton de suppression de la mise en forme dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "toolbarHistory",
@@ -190,7 +260,11 @@
       "type": "Boolean",
       "value": true,
       "hidden": "properties.toolbar.value != true",
-      "bindable": true
+      "bindable": true,
+      "description": "Show undo/redo buttons in the toolbar. Active when toolbar is enabled.",
+      "locale_description": {
+        "fr_FR": "Afficher les boutons annuler/rétablir dans la barre d'outils. Actif quand la barre d'outils est activée."
+      }
     },
     {
       "id": "debounce",
@@ -200,7 +274,11 @@
       },
       "type": "Boolean",
       "value": false,
-      "separator": true
+      "separator": true,
+      "description": "Enable debounce to delay auto-validation until the user stops typing.",
+      "locale_description": {
+        "fr_FR": "Activer le délai pour retarder la validation automatique jusqu'à ce que l'utilisateur arrête de taper."
+      }
     },
     {
       "id": "debounceTime",
@@ -210,10 +288,13 @@
       },
       "type": "Integer",
       "hidden": "properties.debounce.value != true",
-      "value": 200
+      "value": 200,
+      "description": "Debounce delay in milliseconds. Active when debounce is enabled.",
+      "locale_description": {
+        "fr_FR": "Délai de debounce en millisecondes. Actif quand le debounce est activé."
+      }
     }
   ],
-
   "events": [
     {
       "id": "onValidated",
@@ -227,6 +308,10 @@
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
+          },
+          "description": "Plain text content of the editor.",
+          "locale_description": {
+            "fr_FR": "Contenu en texte brut de l'éditeur."
           }
         },
         "html": "<p></p>",
@@ -234,17 +319,27 @@
           "name": "HTML",
           "locale_name": {
             "fr_FR": "HTML"
+          },
+          "description": "HTML representation of the editor content.",
+          "locale_description": {
+            "fr_FR": "Représentation HTML du contenu de l'éditeur."
           }
         },
         "content": {
           "ops": [
-            { "insert": "\n" }
+            {
+              "insert": "\n"
+            }
           ]
         },
         "__desc_content": {
           "name": "Content",
           "locale_name": {
             "fr_FR": "Contenu"
+          },
+          "description": "Structured rich text content (Quill Delta format).",
+          "locale_description": {
+            "fr_FR": "Contenu de texte riche structuré (format Quill Delta)."
           }
         },
         "validation": {
@@ -267,8 +362,16 @@
           "name": "Validation",
           "locale_name": {
             "fr_FR": "Validation"
+          },
+          "description": "Whether the content passed validation.",
+          "locale_description": {
+            "fr_FR": "Si le contenu a passé la validation."
           }
         }
+      },
+      "description": "Fires when the editor content is validated (manually or via debounce). Exposes text, HTML, structured content, and validation state.",
+      "locale_description": {
+        "fr_FR": "Se déclenche quand le contenu de l'éditeur est validé (manuellement ou via debounce). Expose le texte, le HTML, le contenu structuré et l'état de validation."
       }
     },
     {
@@ -283,6 +386,10 @@
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
+          },
+          "description": "Plain text content when focus is received.",
+          "locale_description": {
+            "fr_FR": "Contenu en texte brut quand le focus est reçu."
           }
         },
         "html": "<p></p>",
@@ -290,17 +397,27 @@
           "name": "HTML",
           "locale_name": {
             "fr_FR": "HTML"
+          },
+          "description": "HTML content when focus is received.",
+          "locale_description": {
+            "fr_FR": "Contenu HTML quand le focus est reçu."
           }
         },
         "content": {
           "ops": [
-            { "insert": "\n" }
+            {
+              "insert": "\n"
+            }
           ]
         },
         "__desc_content": {
           "name": "Content",
           "locale_name": {
             "fr_FR": "Contenu"
+          },
+          "description": "Structured content when focus is received.",
+          "locale_description": {
+            "fr_FR": "Contenu structuré quand le focus est reçu."
           }
         },
         "validation": {
@@ -323,8 +440,16 @@
           "name": "Validation",
           "locale_name": {
             "fr_FR": "Validation"
+          },
+          "description": "Validation state when focus is received.",
+          "locale_description": {
+            "fr_FR": "État de validation quand le focus est reçu."
           }
         }
+      },
+      "description": "Fires when the editor receives focus.",
+      "locale_description": {
+        "fr_FR": "Se déclenche quand l'éditeur reçoit le focus."
       }
     },
     {
@@ -339,6 +464,10 @@
           "name": "Text",
           "locale_name": {
             "fr_FR": "Texte"
+          },
+          "description": "Plain text content when focus is lost.",
+          "locale_description": {
+            "fr_FR": "Contenu en texte brut quand le focus est perdu."
           }
         },
         "html": "<p></p>",
@@ -346,17 +475,27 @@
           "name": "HTML",
           "locale_name": {
             "fr_FR": "HTML"
+          },
+          "description": "HTML content when focus is lost.",
+          "locale_description": {
+            "fr_FR": "Contenu HTML quand le focus est perdu."
           }
         },
         "content": {
           "ops": [
-            { "insert": "\n" }
+            {
+              "insert": "\n"
+            }
           ]
         },
         "__desc_content": {
           "name": "Content",
           "locale_name": {
             "fr_FR": "Contenu"
+          },
+          "description": "Structured content when focus is lost.",
+          "locale_description": {
+            "fr_FR": "Contenu structuré quand le focus est perdu."
           }
         },
         "validation": {
@@ -379,18 +518,29 @@
           "name": "Validation",
           "locale_name": {
             "fr_FR": "Validation"
+          },
+          "description": "Validation state when focus is lost.",
+          "locale_description": {
+            "fr_FR": "État de validation quand le focus est perdu."
           }
         }
+      },
+      "description": "Fires when the editor loses focus.",
+      "locale_description": {
+        "fr_FR": "Se déclenche quand l'éditeur perd le focus."
       }
     }
   ],
-
   "actions": [
     {
       "id": "validate",
       "name": "Validate",
       "locale_name": {
         "fr_FR": "Valider"
+      },
+      "description": "Manually trigger validation of the editor content.",
+      "locale_description": {
+        "fr_FR": "Déclencher manuellement la validation du contenu de l'éditeur."
       }
     },
     {
@@ -407,9 +557,17 @@
             "fr_FR": "Texte"
           },
           "type": "String",
-          "bindable": true
+          "bindable": true,
+          "description": "Plain text to set in the editor.",
+          "locale_description": {
+            "fr_FR": "Texte brut à définir dans l'éditeur."
+          }
         }
-      ]
+      ],
+      "description": "Set the editor content as plain text.",
+      "locale_description": {
+        "fr_FR": "Définir le contenu de l'éditeur en texte brut."
+      }
     },
     {
       "id": "setContent",
@@ -425,15 +583,27 @@
             "fr_FR": "Contenu"
           },
           "type": "JSON",
-          "bindable": true
+          "bindable": true,
+          "description": "Rich text content in Quill Delta JSON format.",
+          "locale_description": {
+            "fr_FR": "Contenu de texte riche au format JSON Quill Delta."
+          }
         }
-      ]
+      ],
+      "description": "Set the editor content as structured rich text (Delta format).",
+      "locale_description": {
+        "fr_FR": "Définir le contenu de l'éditeur en texte riche structuré (format Delta)."
+      }
     },
     {
       "id": "clearText",
       "name": "Clear Text/Content",
       "locale_name": {
         "fr_FR": "Supprimer le texte/contenu"
+      },
+      "description": "Clear all content from the editor.",
+      "locale_description": {
+        "fr_FR": "Effacer tout le contenu de l'éditeur."
       }
     },
     {
@@ -441,16 +611,23 @@
       "name": "Focus Text",
       "locale_name": {
         "fr_FR": "Cibler le texte"
+      },
+      "description": "Give focus to the editor.",
+      "locale_description": {
+        "fr_FR": "Donner le focus à l'éditeur."
       }
     }
   ],
-
   "queryable": {
     "text": "\n",
     "__desc_text": {
       "name": "Text",
       "locale_name": {
         "fr_FR": "Texte"
+      },
+      "description": "Current plain text content, available for data binding.",
+      "locale_description": {
+        "fr_FR": "Contenu en texte brut actuel, disponible pour le binding de données."
       }
     },
     "html": "<p></p>",
@@ -458,15 +635,27 @@
       "name": "HTML",
       "locale_name": {
         "fr_FR": "HTML"
+      },
+      "description": "Current HTML content, available for data binding.",
+      "locale_description": {
+        "fr_FR": "Contenu HTML actuel, disponible pour le binding de données."
       }
     },
     "content": {
-      "ops": [{ "insert": "\n" }]
+      "ops": [
+        {
+          "insert": "\n"
+        }
+      ]
     },
     "__desc_content": {
       "name": "Content",
       "locale_name": {
         "fr_FR": "Contenu"
+      },
+      "description": "Current structured content (Delta format), available for data binding.",
+      "locale_description": {
+        "fr_FR": "Contenu structuré actuel (format Delta), disponible pour le binding de données."
       }
     },
     "validation": {
@@ -489,6 +678,10 @@
       "name": "Validation",
       "locale_name": {
         "fr_FR": "Validation"
+      },
+      "description": "Current validation state, available for data binding.",
+      "locale_description": {
+        "fr_FR": "État de validation actuel, disponible pour le binding de données."
       }
     }
   }
