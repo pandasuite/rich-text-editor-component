@@ -303,7 +303,7 @@
         "fr_FR": "Validé"
       },
       "queryable": {
-        "text": "\n",
+        "text": "",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
@@ -381,7 +381,7 @@
         "fr_FR": "Ciblé"
       },
       "queryable": {
-        "text": "\n",
+        "text": "",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
@@ -459,7 +459,7 @@
         "fr_FR": "Perte de focus"
       },
       "queryable": {
-        "text": "\n",
+        "text": "",
         "__desc_text": {
           "name": "Text",
           "locale_name": {
@@ -619,7 +619,7 @@
     }
   ],
   "queryable": {
-    "text": "\n",
+    "text": "",
     "__desc_text": {
       "name": "Text",
       "locale_name": {
