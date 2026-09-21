@@ -5,6 +5,10 @@ import isEqual from "lodash/isEqual";
 import debounce from "lodash/debounce";
 import TurndownService from "turndown";
 
+// Node's native ESM loader requires the extension used by the regression test.
+// eslint-disable-next-line import/extensions
+import stripQuillDocumentTerminator from "./plainText.mjs";
+
 import "quill/dist/quill.core.css";
 import "quill/dist/quill.snow.css";
 import "./index.css";
@@ -35,7 +39,7 @@ function getQueryable() {
   const html = quill.getSemanticHTML();
 
   return {
-    text: quill.getText(),
+    text: stripQuillDocumentTerminator(quill.getText()),
     html,
     markdown: turndownService.turndown(html),
     content: quill.getContents(),
